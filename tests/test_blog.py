@@ -2,7 +2,9 @@ import pytest
 
 from flaskr.db import get_db
 
-
+def test_fail():
+    assert 1 == 1
+    
 def test_index(client, auth):
     response = client.get("/")
     assert b"Log In" in response.data
